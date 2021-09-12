@@ -67,7 +67,7 @@ files/nexState.json
   "two": "deux",
   "three": "trois",
   "four": "quatre",
-  "five": "cinq"
+  "five": "cinq",
   "six": "six",
   "seven": "sept",
   "eight": "huit",
