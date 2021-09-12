@@ -1,5 +1,5 @@
 {
-  "name": "translation-generator",
+  "name": "monk-translation-generator",
   "version": "1.0.0",
   "description": "Convert constants in translations",
   "type": "module",
@@ -9,6 +9,7 @@
   "license": "BSD-3-Clause-Clear",
   "private": false,
   "files": [
+    ".env",
     "lib",
     "LICENSE",
     "README.md"
@@ -28,7 +29,8 @@
   "scripts": {
     "start": "nodemon start.js --ignore lib/ --ignore files/ --ignore tests/",
     "test": "yarn build && mocha tests/*",
-    "build": "babel src --out-dir lib --source-maps"
+    "build": "babel src --out-dir lib --source-maps",
+    "release": "yarn build && release-it"
   },
   "dependencies": {
     "axios": "^0.21.4",
