@@ -1,9 +1,9 @@
-![Monk banner](banner.webp)
+![Monk banner](https://raw.githubusercontent.com/monkvision/translation-generator/master/banner.webp)
 ``` text
 author: monkvision
 name: monk-translation-generator
 description: Tool generating a translations JSON file
-version: 1.0.0
+version: 1.0.2
 ```
 
 ## Usage
