@@ -1,6 +1,7 @@
 import assert from 'assert';
 import dotenv from 'dotenv';
-import run from '../../src/index.js';
+
+import { run } from '../consts.test.js';
 
 const env = dotenv.config({ path: 'tests/test1/.env' }).parsed;
 

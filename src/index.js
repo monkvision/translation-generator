@@ -1,14 +1,11 @@
 /* eslint-disable no-console */
 import axios from 'axios';
-import dotenv from 'dotenv';
 import fs from 'fs';
 import isEmpty from 'lodash.isempty';
 
 const missing = '⚠️...';
 
-const localEnv = dotenv.config({ path: '.env.local' }).parsed;
-
-async function run(env = localEnv) {
+async function run(env) {
   const translator = axios.create({
     baseURL: env.TRANSLATE_API_BASE_URL,
     timeout: 60000,
@@ -25,7 +22,7 @@ async function run(env = localEnv) {
       target: env.TARGET_LNG,
     });
 
-    return `${response.data.translatedText} 🆕`;
+    return `${response.data.translatedText}${env.FLAG_NEW ? ' 🆕' : ''}`;
   }
 
   async function findMissing(state, key) {
@@ -101,7 +98,3 @@ async function run(env = localEnv) {
 }
 
 export default run;
-
-if (localEnv.RUN) {
-  run(localEnv);
-}
