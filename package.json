@@ -1,5 +1,5 @@
 {
-  "name": "translation-generator",
+  "name": "monk-translation-generator",
   "version": "1.0.0",
   "description": "Convert constants in translations",
   "type": "module",
