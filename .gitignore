@@ -1,0 +1,9 @@
+node_modules
+lib
+/files/
+.env.local
+in.txt.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+error.log
